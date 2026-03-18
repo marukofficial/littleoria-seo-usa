@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://seo-usa.littleoria.com",
   },
+  verification: {
+    google: "0sxmgpnFM0mhMD-xq3Bu6mTO9c79-X40NJIzf1CDz14",
+  },
 };
 
 export default function RootLayout({
