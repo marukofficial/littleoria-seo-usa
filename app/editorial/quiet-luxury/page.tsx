@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The Quiet Luxury Movement — History, Philosophy, and Practice",
+  title: "Quiet Luxury | Elevated Minimal Wardrobe",
   description:
     "A comprehensive exploration of quiet luxury: from its historical roots in post-war discretion to its modern expression as the antithesis of logo culture.",
   openGraph: {
-    title: "The Quiet Luxury Movement — A Deep Dive | Littleoria",
+    title: "Quiet Luxury | Elevated Minimal Wardrobe",
     description: "From historical roots in post-war discretion to modern anti-logo culture.",
     type: "article",
     locale: "en_US",
@@ -27,12 +27,25 @@ const ARTICLE_JSON_LD = {
   dateModified: "2026-03-18",
 };
 
+const BREADCRUMB_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://littleoria.com" },
+    { "@type": "ListItem", position: 2, name: "Quiet Luxury", item: "https://seo-usa.littleoria.com/editorial/quiet-luxury" },
+  ],
+};
+
 export default function QuietLuxuryPage() {
   return (
     <article className="article-container">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
       />
 
       <h1>The Quiet Luxury Movement:<br />A Cultural and Sartorial Deep Dive</h1>
@@ -154,12 +167,18 @@ export default function QuietLuxuryPage() {
       </div>
 
       <nav style={{ marginTop: "3rem", fontSize: "0.9375rem" }}>
-        <p style={{ color: "#6b6b6b", marginBottom: "0.5rem" }}>Continue reading</p>
-        <Link href="/editorial/minimalist-style">Minimalist Style Identity</Link>
+        <p style={{ color: "#6b6b6b", marginBottom: "0.5rem" }}>You may also explore</p>
+        <Link href="/editorial/minimalist-style">Minimalist Style</Link>
         {" · "}
-        <Link href="/editorial/outfit-ideas">Outfit Formulas</Link>
+        <Link href="/editorial/outfit-ideas">Outfit Ideas</Link>
         {" · "}
-        <Link href="/seo/luxury-cardigans">Investment Knitwear</Link>
+        <Link href="/seo/luxury-cardigans">Luxury Cardigans</Link>
+        {" · "}
+        <Link href="/seo/minimalist-clothing">Minimalist Clothing</Link>
+        {" · "}
+        <Link href="/seo/premium-basics">Premium Basics</Link>
+        {" · "}
+        <Link href="/seo/capsule-wardrobe">Capsule Wardrobe</Link>
       </nav>
     </article>
   );

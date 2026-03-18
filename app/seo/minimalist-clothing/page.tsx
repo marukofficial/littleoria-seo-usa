@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The Architecture of Minimalist Wardrobes — Beyond Owning Less",
+  title: "Minimalist Clothing | Elevated Minimal Wardrobe",
   description:
     "Minimalist clothing isn't about reduction — it's about design intelligence. Explore the structural principles behind wardrobes that work with spatial awareness and intentional gaps.",
   openGraph: {
-    title: "Minimalist Clothing Architecture | Littleoria",
+    title: "Minimalist Clothing | Elevated Minimal Wardrobe",
     description:
       "The structural principles behind wardrobes that work with spatial awareness and intentional gaps.",
     type: "article",
@@ -18,6 +18,14 @@ export const metadata: Metadata = {
 };
 
 const PAGE_JSON_LD = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://littleoria.com" },
+      { "@type": "ListItem", position: 2, name: "Minimalist Clothing", item: "https://seo-usa.littleoria.com/seo/minimalist-clothing" },
+    ],
+  },
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -140,12 +148,18 @@ export default function MinimalistClothingPage() {
       </div>
 
       <nav style={{ marginTop: "3rem", fontSize: "0.9375rem" }}>
-        <p style={{ color: "#6b6b6b", marginBottom: "0.5rem" }}>Continue reading</p>
-        <Link href="/seo/luxury-cardigans">Investment Knitwear</Link>
+        <p style={{ color: "#6b6b6b", marginBottom: "0.5rem" }}>You may also explore</p>
+        <Link href="/seo/luxury-cardigans">Luxury Cardigans</Link>
         {" · "}
-        <Link href="/seo/premium-basics">Beyond Basic</Link>
+        <Link href="/seo/premium-basics">Premium Basics</Link>
         {" · "}
-        <Link href="/editorial/minimalist-style">Finding Your Minimalist Identity</Link>
+        <Link href="/seo/capsule-wardrobe">Capsule Wardrobe</Link>
+        {" · "}
+        <Link href="/editorial/minimalist-style">Minimalist Style</Link>
+        {" · "}
+        <Link href="/editorial/outfit-ideas">Outfit Ideas</Link>
+        {" · "}
+        <Link href="/editorial/quiet-luxury">Quiet Luxury</Link>
       </nav>
     </article>
   );
